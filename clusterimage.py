@@ -20,7 +20,8 @@ def app():
         
         # Check if the image exists before rendering it
         if not pd.isnull(row['image']):
-            st.image(row['image'], caption='Image', use_column_width=True)
+            # Set a specific width for the images (e.g., width=200)
+            st.image(row['image'], caption='Image', use_column_width=False, width=260)
         else:
             st.write("No image available for this item.")
 
